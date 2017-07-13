@@ -24,6 +24,7 @@
     $tmp["TANGGAL_REGISTRASI"] = $row["TANGGAL_REGISTRASI"];
     $tmp["TEMPAT_LAHIR"] = $row["TEMPAT_LAHIR"];
     $tmp["UKURAN_KAOS"] = $row["UKURAN_KAOS"];
+    $tmp["NAMA_SEMINAR"] = $row["NAMA_SEMINAR"];
 
     array_push($response["data_seminar"], $tmp);
   }
