@@ -9,10 +9,11 @@
 
 
   $NAMA = $_REQUEST['NAMA'];
+  $ALAMAT = $_REQUEST['ALAMAT'];
 
   $flag['code']=0;
 
-  $result = mysql_query("INSERT INTO test VALUES ('$NAMA')", $con);
+  $result = mysql_query("INSERT INTO TBL_T_SEMINAR VALUES ('$NAMA', '$ALAMAT')", $con);
 	if($result)
   {
 		$flag['code']=1;
