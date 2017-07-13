@@ -9,7 +9,7 @@
 	$con = mysql_connect($host,$uname,$pwd) or die("connection failed");
 	mysql_select_db($db,$con) or die("db selection failed");
 
-	$result = mysql_query("SELECT * FROM TBL_T_SEMINAR a left outer join TBL_M_SEMINAR b on a.idTBL_M_SEMINAR = b.idTBL_M_SEMINAR", $con);
+	$result = mysql_query("SELECT * FROM TBL_T_SEMINAR a left outer join TBL_M_SEMINAR b on a.idTBL_M_SEMINAR = b.idTBL_M_SEMINAR order by a.idTBL_T_SEMINAR desc", $con);
 
   while ($row = mysql_fetch_assoc($result)) {
     $tmp = array();
