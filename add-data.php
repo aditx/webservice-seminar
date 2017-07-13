@@ -18,14 +18,15 @@
   $TEMPAT_LAHIR = $_REQUEST['TEMPAT_LAHIR'];
   $UKURAN_KAOS = $_REQUEST['UKURAN_KAOS'];
 
-  $flag['code']=0;
-
   $result = mysql_query("INSERT INTO TBL_T_SEMINAR VALUES ('', '$idTBL_M_SEMINAR', '$NAMA', '$ALAMAT', '$JENIS_KELAMIN', '$KTP', '$EMAIL', '$NO_TELPON', '$TANGGAL_REGISTRASI', '$TEMPAT_LAHIR', '$UKURAN_KAOS')", $con);
 	if($result)
   {
-		$flag['code']=1;
-	}
+		$flag['code']= "Insert sukses";
+    print(json_encode($flag));
+	} else {
+    $flag['code']= "Insert gagal";
+    print(json_encode($flag));
+  }
 
-  print(json_encode($flag));
 	mysql_close($con);
 ?>
