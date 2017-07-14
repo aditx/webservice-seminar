@@ -20,7 +20,7 @@
   $result = mysql_query("UPDATE TBL_T_SEMINAR SET idTBL_M_SEMINAR = '$idTBL_M_SEMINAR', NAMA = '$NAMA', ALAMAT = '$ALAMAT', KTP = '$KTP', EMAIL = '$EMAIL', NO_TELPON = '$NO_TELPON', TEMPAT_LAHIR = '$TEMPAT_LAHIR' WHERE idTBL_T_SEMINAR = '$idTBL_T_SEMINAR'", $con);
 	if($result)
   {
-		$flag['code']= "Update sukses";
+		$flag['code']= $NAMA;
     print(json_encode($flag));
 	} else {
     $flag['code']= "Update gagal";
